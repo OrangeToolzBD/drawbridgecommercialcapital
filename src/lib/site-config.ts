@@ -21,8 +21,8 @@ export const SITE_CONFIG = {
   defaultDescription:
     "Working capital, invoice factoring, AR financing, SBA loans and small business loans for San Antonio, TX. Pre-qualify with a soft credit pull and review offers in 24 hours.",
 
-  phone: "(210) 853-4140",
-  phoneHref: "tel:+12108534140",
+  phone: "(726) 265-1699",
+  phoneHref: "tel:+17262651699",
   email: "",
 
   hasPublicOffice: true,
