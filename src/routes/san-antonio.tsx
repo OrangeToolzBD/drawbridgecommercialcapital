@@ -280,7 +280,7 @@ function SuburbServicesMatrix() {
                   params={{ suburb: s.slug }}
                   className="text-[color:var(--brand-vermillion)] hover:underline"
                 >
-                  View hub ->
+                  View hub &rarr;
                 </Link>
               </div>
             </div>
