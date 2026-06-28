@@ -86,9 +86,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      // Preload the font CSS so the browser fetches it early without blocking render
+      {
+        rel: "preload",
+        as: "style",
+        href: "https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700&family=Saira+Condensed:wght@600;700;800&display=swap",
+      },
+      // Load font stylesheet non-blocking via media trick
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Saira:wght@100..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700&family=Saira+Condensed:wght@600;700;800&display=swap",
+        media: "print",
+        // @ts-expect-error onLoad is valid HTML attribute for non-blocking font swap
+        onLoad: "this.media='all'",
       },
       {
         rel: "stylesheet",
@@ -107,11 +117,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
+const FONT_URL =
+  "https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700&family=Saira+Condensed:wght@600;700;800&display=swap";
+
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
         <HeadContent />
+        {/* Fallback for browsers/bots with JS disabled — ensures fonts load even without the onLoad trick */}
+        <noscript>
+          <link rel="stylesheet" href={FONT_URL} />
+        </noscript>
       </head>
       <body>
         {children}
