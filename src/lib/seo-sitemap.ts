@@ -46,13 +46,17 @@ ${body}
 }
 
 export function sitemapXmlResponse(): Response {
-  if (!INDEXABLE) {
-    return new Response("", {
-      status: 404,
-      headers: { "content-type": "text/plain; charset=utf-8" },
-    });
-  }
-  return new Response(buildSitemapXml(), {
+  // Always return HTTP 200 so the TanStack Start prerender step does not fail
+  // during a static build. When the site is not indexable, return an empty but
+  // valid <urlset> so no production URLs leak into the build artifact -
+  // robots.txt still emits Disallow: / under the same flag.
+  const body = INDEXABLE
+    ? buildSitemapXml()
+    : `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+</urlset>
+`;
+  return new Response(body, {
     status: 200,
     headers: {
       "content-type": "application/xml; charset=utf-8",
