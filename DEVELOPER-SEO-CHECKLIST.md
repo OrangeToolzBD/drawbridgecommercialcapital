@@ -50,6 +50,7 @@ Open the page → right-click → **View Page Source** (not "Inspect"). Search f
 **❌ The Problem**
 A test or preview site can be found by Google by accident. Then the test copy fights with the real site in search results.
 
+
 **✅ The Fix**
 Add a switch called `INDEXABLE` (env value `VITE_INDEXABLE`). When OFF (the default), every page outputs `<meta name="robots" content="noindex, nofollow">` and `/robots.txt` returns `Disallow: /`. Turn it ON only for the real live site.
 
