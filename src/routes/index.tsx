@@ -1272,7 +1272,7 @@ function SuccessStories() {
       person: "Marco Delgado",
       role: "Owner & Operator",
       tint: "from-[oklch(0.55_0.18_30)] to-[oklch(0.36_0.18_22)]",
-      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&crop=face&q=80",
+      photo: "https://r2.connectsocial.app/387/ws-images/photo-1507003211169-0a1dd7228f2d-322253.jpg",
     },
     {
       name: "I-35 NE Distribution",
@@ -1282,7 +1282,7 @@ function SuccessStories() {
       person: "Renee Calderon",
       role: "CFO",
       tint: "from-[oklch(0.62_0.2_35)] to-[oklch(0.42_0.19_25)]",
-      photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=96&h=96&fit=crop&crop=face&q=80",
+      photo: "https://r2.connectsocial.app/387/ws-images/photo-1573496359142-b8d87734a5a2-0eb7ba.jpg",
     },
     {
       name: "Stone Oak Dental Partners",
@@ -1292,7 +1292,7 @@ function SuccessStories() {
       person: "Dr. Priya Anand",
       role: "Managing Partner",
       tint: "from-[oklch(0.65_0.18_40)] to-[oklch(0.45_0.19_25)]",
-      photo: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=96&h=96&fit=crop&crop=face&q=80",
+      photo: "https://r2.connectsocial.app/387/ws-images/photo-1594824476967-48c8b964273f-edd0e1.jpg",
     },
     {
       name: "Pearl District Kitchen Co.",
@@ -1302,7 +1302,7 @@ function SuccessStories() {
       person: "Tomás Reyes",
       role: "Executive Chef & Co-Founder",
       tint: "from-[oklch(0.58_0.19_35)] to-[oklch(0.36_0.18_22)]",
-      photo: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=96&h=96&fit=crop&crop=face&q=80",
+      photo: "https://r2.connectsocial.app/387/ws-images/photo-1531384441138-2736e62e0919-d5b3a2.jpg",
     },
     {
       name: "Alamo Heights HVAC",
@@ -1312,7 +1312,7 @@ function SuccessStories() {
       person: "Jordan Whitfield",
       role: "President",
       tint: "from-[oklch(0.7_0.16_45)] to-[oklch(0.48_0.18_28)]",
-      photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=96&h=96&fit=crop&crop=face&q=80",
+      photo: "https://r2.connectsocial.app/387/ws-images/photo-1560250097-0b93528c311a-65da7e.jpg",
     },
     {
       name: "Southtown Hospitality Group",
@@ -1322,7 +1322,7 @@ function SuccessStories() {
       person: "Camila Vargas",
       role: "Founder",
       tint: "from-[oklch(0.6_0.2_30)] to-[oklch(0.4_0.19_22)]",
-      photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=96&h=96&fit=crop&crop=face&q=80",
+      photo: "https://r2.connectsocial.app/387/ws-images/photo-1580489944761-15a19d654956-2fe459.jpg",
     },
   ];
   const initials = (n: string) =>
