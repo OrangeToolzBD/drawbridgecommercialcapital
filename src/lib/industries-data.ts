@@ -431,7 +431,7 @@ export const INDUSTRIES: Industry[] = [
     icon: Plane,
     hero: "Capital for JBSA-adjacent operators.",
     intro:
-      "San Antonio is Military City USA - JBSA-Lackland, JBSA-Randolph, Port San Antonio and a deep base of MRO, defense IT and cleared-services contractors. Anchor finances cleared and veteran-owned operators with SBA Express, equipment and government-contract working capital.",
+      "San Antonio is Military City USA - JBSA-Lackland, JBSA-Randolph, Port San Antonio and a deep base of MRO, defense IT and cleared-services contractors. Drawbridge finances cleared and veteran-owned operators with SBA Express, equipment and government-contract working capital.",
     services: [
       make(
         "veteran-business-loans",

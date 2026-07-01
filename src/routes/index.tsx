@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
-const siteLogoUrl = "/anchorgrouplogo.png";
+const siteLogoUrl = "/drawbridgelogo.png";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -664,13 +664,13 @@ export function Header() {
   );
 }
 
-/* ---------------- Hero - Anchor identity: split-pane with stat callouts ---------------- */
+/* ---------------- Hero - Drawbridge identity: split-pane with stat callouts ---------------- */
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-[color:var(--brand-charcoal)] text-white">
       {/* Background image - port/freight scene with baked-in brand glow on the left */}
       <img
-        src="/anchorhero-bg.png"
+        src="/drawbridgehero-bg.png"
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center"
@@ -698,7 +698,7 @@ function Hero() {
             </span>
           </h1>
           <p className="mt-5 max-w-xl text-lg text-white/80">
-            Anchor Capital Group brokers invoice factoring, accounts receivable financing,
+            Drawbridge Commercial Capital brokers invoice factoring, accounts receivable financing,
             SBA loans and working capital for {CITY_STATE} operators. Soft credit pull,
             real offers in 24 hours.
           </p>
@@ -781,7 +781,7 @@ function Hero() {
             </div>
             <div className="mt-5 flex items-center justify-between rounded-xl bg-[color:var(--brand-bronze)]/15 px-4 py-3">
               <span className="text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-bronze)]">
-                Anchor advisor available
+                Drawbridge advisor available
               </span>
               <a
                 href={SITE_CONFIG.phoneHref}
@@ -797,7 +797,7 @@ function Hero() {
   );
 }
 
-/* ---------------- Anchor Ledger - relocated metrics + GBP plays on a dark band ---------------- */
+/* ---------------- Drawbridge Ledger - relocated metrics + GBP plays on a dark band ---------------- */
 function AnchorLedger() {
   const metrics = [
     { value: SITE_CONFIG.stats.businessesFunded, label: "Businesses funded" },
@@ -825,7 +825,7 @@ function AnchorLedger() {
             The Ledger
           </div>
           <h2 className="max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">
-            What Anchor brokers - and the numbers that back it.
+            What Drawbridge brokers - and the numbers that back it.
           </h2>
         </div>
 
@@ -1107,7 +1107,7 @@ function CapitalDesk() {
 function HowItWorks() {
   const steps = [
     { n: 1, title: "Tell us the brief", desc: "60 seconds: how much, what for, how soon. No documents up front." },
-    { n: 2, title: "We shop the bench", desc: "Anchor pre-screens 75+ Texas-active lenders against your profile." },
+    { n: 2, title: "We shop the bench", desc: "Drawbridge pre-screens 75+ Texas-active lenders against your profile." },
     { n: 3, title: "Compare real offers", desc: "Side-by-side: rates, terms, fees and remit schedules - no spin." },
     { n: 4, title: "Funded", desc: "Sign the docs and receive funds in as little as 24 hours." },
   ];
@@ -1122,7 +1122,7 @@ function HowItWorks() {
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[color:var(--brand-bronze)]/40 bg-[color:var(--brand-bronze)]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-bronze)]">
-            <Compass className="h-3.5 w-3.5" /> The Anchor process
+            <Compass className="h-3.5 w-3.5" /> The Drawbridge process
           </span>
           <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
             Four steps. Zero surprises.
@@ -1178,7 +1178,7 @@ function Industries() {
               Sector Ledger · 010
             </div>
             <h2 className="mt-4 font-display text-3xl font-bold tracking-tight md:text-5xl">
-              The ten sectors Anchor underwrites first
+              The ten sectors Drawbridge underwrites first
             </h2>
             <p className="mt-4 text-muted-foreground">
               Each row is a specialty bench. Texas-specific verticals carry a <span className="font-semibold text-[color:var(--brand-vermillion)]">TX</span> marker - these are deals we won't hand off to a generalist.
@@ -1337,7 +1337,7 @@ function SuccessStories() {
     <section id="stories" className="relative overflow-hidden px-6 py-12 sm:py-20">
       <div className="relative mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-          {CITY} businesses Anchor has funded
+          {CITY} businesses Drawbridge has funded
         </h2>
         <p className="mt-4 text-muted-foreground">
           Composite outcomes from real deals across South Texas. Names changed; structures unchanged.
@@ -1408,7 +1408,7 @@ function CityIntro() {
             connect {CITY} owners with the right funding product, fast.
           </p>
           <p className="mt-4 text-muted-foreground">
-            Anchor works with short-term lenders, SBA Preferred Banks active in Texas, equipment
+            Drawbridge works with short-term lenders, SBA Preferred Banks active in Texas, equipment
             financiers and merchant cash advance providers - so you can compare{" "}
             <strong>fast business loans</strong>, <strong>startup business loans</strong> and{" "}
             <strong>same-day business funding</strong> in one place.

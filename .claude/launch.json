@@ -2,9 +2,9 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "anchorcapitalgroup-dev",
+      "name": "drawbridgecommercialcapital-dev",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["--prefix", "C:\\Users\\Masud\\Desktop\\setu\\otofc\\sites\\anchorcapitalgroup", "run", "dev"],
+      "runtimeArgs": ["--prefix", "C:\\Users\\Masud\\Desktop\\setu\\otofc\\sites\\drawbridgecommercialcapital", "run", "dev"],
       "port": 8084,
       "autoPort": false
     }

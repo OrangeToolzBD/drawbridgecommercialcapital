@@ -4,7 +4,7 @@
 
 const RAW_SITE_URL =
   (import.meta.env?.VITE_SITE_URL as string | undefined) ??
-  "https://anchorcapitalgroup.com";
+  "https://drawbridgecommercialcapital.com";
 
 export const SITE_URL: string = RAW_SITE_URL.replace(/\/+$/, "");
 
@@ -15,8 +15,8 @@ export const SITE_CONFIG = {
   url: SITE_URL,
   indexable: INDEXABLE,
 
-  name: "Anchor Capital Group",
-  legalName: "Anchor Capital Group, LLC",
+  name: "Drawbridge Commercial Capital",
+  legalName: "Drawbridge Commercial Capital, LLC",
   tagline: "Steady capital for Texas operators",
   defaultDescription:
     "Working capital, invoice factoring, AR financing, SBA loans and small business loans for San Antonio, TX. Pre-qualify with a soft credit pull and review offers in 24 hours.",
@@ -59,10 +59,10 @@ export const SITE_CONFIG = {
   ],
 
   social: {
-    googleBusinessProfile: "https://www.google.com/maps/place/Anchor+Capital+Group",
-    linkedin: "https://www.linkedin.com/company/anchor-capital-group",
-    facebook: "https://www.facebook.com/anchorcapitalgroup",
-    twitter: "https://twitter.com/AnchorCapGroup",
+    googleBusinessProfile: "https://www.google.com/maps/place/Drawbridge+Commercial+Capital",
+    linkedin: "https://www.linkedin.com/company/drawbridge-commercial-capital",
+    facebook: "https://www.facebook.com/drawbridgecommercialcapital",
+    twitter: "https://twitter.com/DrawbridgeCap",
   },
 
   defaultOgImage: "/og-default.svg",

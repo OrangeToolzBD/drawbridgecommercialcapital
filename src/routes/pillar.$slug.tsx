@@ -14,7 +14,7 @@ export const Route = createFileRoute("/pillar/$slug")({
     const p = getPillar(params.slug);
     const title = p ? `${p.title} in San Antonio, TX` : "Loan Program";
     const description =
-      p?.description ?? "San Antonio business financing programs from Anchor Capital Group.";
+      p?.description ?? "San Antonio business financing programs from Drawbridge Commercial Capital.";
     const path = `/pillar/${params.slug}`;
     return buildHead({
       title,
@@ -136,7 +136,7 @@ function PillarPage() {
               <p key={i} className="mt-4 text-muted-foreground">{p}</p>
             ))}
             <p className="mt-4 text-muted-foreground">
-              Every Anchor Capital Group application runs through Texas-licensed lending partners -
+              Every Drawbridge Commercial Capital application runs through Texas-licensed lending partners -
               one soft credit pull, side-by-side offers, no fee until close.
             </p>
           </div>

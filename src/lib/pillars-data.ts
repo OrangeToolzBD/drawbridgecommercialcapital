@@ -1,4 +1,4 @@
-// Anchor Capital Group - SEO pillar pages for San Antonio, TX.
+// Drawbridge Commercial Capital - SEO pillar pages for San Antonio, TX.
 // 14 Money Pillars + 10 Vertical Pillars = 24 total.
 // The first 6 Money pillars mirror the active Google Business Profile plays:
 // accounts-receivable-financing, invoice-factoring, revenue-based-financing,
@@ -58,7 +58,7 @@ export const MONEY_PILLARS: Pillar[] = [
     kind: "money",
     tagline: "One soft-pull application, every major loan product",
     description:
-      "Compare term loans, SBA, lines of credit, equipment financing and revenue-based capital through a single soft-pull application. Anchor matches San Antonio operators with the lender most likely to fund their deal.",
+      "Compare term loans, SBA, lines of credit, equipment financing and revenue-based capital through a single soft-pull application. Drawbridge matches San Antonio operators with the lender most likely to fund their deal.",
     bullets: ["$5K-$5M", "75+ lender network", "Soft credit pull only"],
     highlight: "Funded in 24-72 hrs",
     volume: 246000,

@@ -167,7 +167,7 @@ function SuburbPage() {
               Case Files
             </div>
             <h2 className="mt-3 font-display text-2xl font-bold tracking-tight md:text-3xl">
-              {suburb.name} businesses Anchor works with
+              {suburb.name} businesses Drawbridge works with
             </h2>
             <p className="mt-2 text-muted-foreground">Representative case studies - composite profiles drawn from real funding outcomes.</p>
             <ul className="mt-8 grid gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
@@ -264,7 +264,7 @@ function SuburbPage() {
               Funding · {suburb.name}
             </div>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight md:text-4xl">
-              Anchor {suburb.name} businesses, fast.
+              Drawbridge {suburb.name} businesses, fast.
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-white/70">
               Get matched with the right program in minutes - soft credit pull, no obligation.

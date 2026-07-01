@@ -34,7 +34,7 @@ export const Route = createFileRoute("/apply-now")({
 
 const STEPS = [
   { n: "01", label: "Brief", desc: "60-second business overview" },
-  { n: "02", label: "Shop", desc: "Anchor pre-screens 75+ lenders" },
+  { n: "02", label: "Shop", desc: "Drawbridge pre-screens 75+ lenders" },
   { n: "03", label: "Compare", desc: "Real offers side-by-side" },
   { n: "04", label: "Funded", desc: "Wire in as little as 24 hours" },
 ];
@@ -66,7 +66,7 @@ function ApplyNowPage() {
             <span className="block text-[color:var(--brand-vermillion)]">We'll do the shopping.</span>
           </h1>
           <p className="mt-4 max-w-2xl text-white/80">
-            Share a few details about your business and Anchor will pre-screen the right lenders for
+            Share a few details about your business and Drawbridge will pre-screen the right lenders for
             your file - across {CITY_STATE} and the broader Texas market.
           </p>
           <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-[color:var(--brand-vermillion)]/40 bg-[color:var(--brand-vermillion)]/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[color:var(--brand-vermillion)] backdrop-blur">
@@ -144,7 +144,7 @@ function ApplyNowPage() {
             </ul>
           </div>
 
-          {/* Anchor ledger - dark metric tiles */}
+          {/* Drawbridge ledger - dark metric tiles */}
           <div className="rounded-none border border-white/10 bg-[color:var(--brand-charcoal)] p-5 text-white">
             <div className="flex items-center justify-between">
               <span className="font-display text-[11px] font-bold uppercase tracking-[0.18em] text-[color:var(--brand-vermillion)]">
@@ -179,7 +179,7 @@ function ApplyNowPage() {
               Need a quick gut-check?
             </div>
             <p className="mt-2 text-sm text-muted-foreground">
-              Talk to an Anchor advisor in {CITY} before you finish the form.
+              Talk to an Drawbridge advisor in {CITY} before you finish the form.
             </p>
             <a
               href={SITE_CONFIG.phoneHref}
