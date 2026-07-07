@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SanAntonioRouteImport } from './routes/san-antonio'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ApplyNowRouteImport } from './routes/apply-now'
@@ -18,6 +19,11 @@ import { Route as PillarSlugRouteImport } from './routes/pillar.$slug'
 import { Route as IndustrySlugRouteImport } from './routes/industry.$slug'
 import { Route as SanAntonioSuburbPillarRouteImport } from './routes/san-antonio.$suburb.$pillar'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SanAntonioRoute = SanAntonioRouteImport.update({
   id: '/san-antonio',
   path: '/san-antonio',
@@ -64,6 +70,7 @@ export interface FileRoutesByFullPath {
   '/apply-now': typeof ApplyNowRoute
   '/contact': typeof ContactRoute
   '/san-antonio': typeof SanAntonioRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/industry/$slug': typeof IndustrySlugRoute
   '/pillar/$slug': typeof PillarSlugRoute
   '/san-antonio/$suburb': typeof SanAntonioSuburbRouteWithChildren
@@ -74,6 +81,7 @@ export interface FileRoutesByTo {
   '/apply-now': typeof ApplyNowRoute
   '/contact': typeof ContactRoute
   '/san-antonio': typeof SanAntonioRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/industry/$slug': typeof IndustrySlugRoute
   '/pillar/$slug': typeof PillarSlugRoute
   '/san-antonio/$suburb': typeof SanAntonioSuburbRouteWithChildren
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/apply-now': typeof ApplyNowRoute
   '/contact': typeof ContactRoute
   '/san-antonio': typeof SanAntonioRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/industry/$slug': typeof IndustrySlugRoute
   '/pillar/$slug': typeof PillarSlugRoute
   '/san-antonio/$suburb': typeof SanAntonioSuburbRouteWithChildren
@@ -97,6 +106,7 @@ export interface FileRouteTypes {
     | '/apply-now'
     | '/contact'
     | '/san-antonio'
+    | '/sitemap.xml'
     | '/industry/$slug'
     | '/pillar/$slug'
     | '/san-antonio/$suburb'
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
     | '/apply-now'
     | '/contact'
     | '/san-antonio'
+    | '/sitemap.xml'
     | '/industry/$slug'
     | '/pillar/$slug'
     | '/san-antonio/$suburb'
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
     | '/apply-now'
     | '/contact'
     | '/san-antonio'
+    | '/sitemap.xml'
     | '/industry/$slug'
     | '/pillar/$slug'
     | '/san-antonio/$suburb'
@@ -128,12 +140,20 @@ export interface RootRouteChildren {
   ApplyNowRoute: typeof ApplyNowRoute
   ContactRoute: typeof ContactRoute
   SanAntonioRoute: typeof SanAntonioRouteWithChildren
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   IndustrySlugRoute: typeof IndustrySlugRoute
   PillarSlugRoute: typeof PillarSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/san-antonio': {
       id: '/san-antonio'
       path: '/san-antonio'
@@ -221,6 +241,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApplyNowRoute: ApplyNowRoute,
   ContactRoute: ContactRoute,
   SanAntonioRoute: SanAntonioRouteWithChildren,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   IndustrySlugRoute: IndustrySlugRoute,
   PillarSlugRoute: PillarSlugRoute,
 }

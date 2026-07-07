@@ -3,17 +3,20 @@ import { INDUSTRIES } from "./industries-data";
 import { PILLARS, TOP_MONEY_PILLARS } from "./pillars-data";
 import { SUBURBS } from "./suburbs-data";
 
+// Last-generated date for every URL; resolves to the build/deploy date.
+const LASTMOD = new Date().toISOString().slice(0, 10);
+
+const CITY = "san-antonio";
+
 function collectUrls(): string[] {
-  const staticPaths = ["/", "/contact", "/apply-now", "/san-antonio"];
+  const staticPaths = ["/", "/contact", "/apply-now", `/${CITY}`];
   const industryPaths = INDUSTRIES.map((i) => `/industry/${i.slug}`);
   const pillarPaths = PILLARS.map((p) => `/pillar/${p.slug}`);
-  const suburbPaths = SUBURBS.map((s) => `/san-antonio/${s.slug}`);
-  const suburbPillarPaths: string[] = [];
-  for (const s of SUBURBS) {
-    for (const p of TOP_MONEY_PILLARS) {
-      suburbPillarPaths.push(`/san-antonio/${s.slug}/${p.slug}`);
-    }
-  }
+  const suburbPaths = SUBURBS.map((s) => `/${CITY}/${s.slug}`);
+  // Suburb x top-money-pillar SEO pages.
+  const suburbPillarPaths = SUBURBS.flatMap((s) =>
+    TOP_MONEY_PILLARS.map((p) => `/${CITY}/${s.slug}/${p.slug}`),
+  );
 
   return [
     ...staticPaths,
@@ -36,7 +39,10 @@ function escapeXml(value: string): string {
 export function buildSitemapXml(): string {
   const urls = collectUrls();
   const body = urls
-    .map((u) => `  <url><loc>${escapeXml(u)}</loc></url>`)
+    .map(
+      (u) =>
+        `  <url><loc>${escapeXml(u)}</loc><lastmod>${LASTMOD}</lastmod></url>`,
+    )
     .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -46,16 +52,12 @@ ${body}
 }
 
 export function sitemapXmlResponse(): Response {
-  // Always return HTTP 200 so the TanStack Start prerender step does not fail
-  // during a static build. When the site is not indexable, return an empty but
-  // valid <urlset> so no production URLs leak into the build artifact -
-  // robots.txt still emits Disallow: / under the same flag.
+  // Always return 200 so the TanStack Start prerender step never fails. When
+  // the site is not indexable, emit an empty (but valid) urlset so no URLs
+  // leak into the build - robots.txt disallows crawling under the same flag.
   const body = INDEXABLE
     ? buildSitemapXml()
-    : `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-</urlset>
-`;
+    : `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n</urlset>\n`;
   return new Response(body, {
     status: 200,
     headers: {
